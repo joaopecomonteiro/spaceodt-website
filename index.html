@@ -232,14 +232,74 @@
     }
 
     /* ── Projects ── */
-    .placeholder {
-      color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.7;
+    .project-card {
+      text-align: left;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
     }
 
-    .placeholder p {
+    .project-card h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
       margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .project-card p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .project-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .btn-primary:hover {
+      background: #ffc93a;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(245, 184, 32, 0.7);
+      color: var(--bg);
+    }
+
+    .pip-snippet {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.8rem;
+      background: var(--bg);
+      color: var(--accent);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.5rem 0.85rem;
+      display: inline-block;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.02em;
     }
   </style>
 </head>
@@ -298,8 +358,22 @@
     <div class="card">
       <h1 style="margin-bottom:1.75rem;">Projects</h1>
       <hr class="divider" />
-      <div class="placeholder">
-        <p>Coming soon.</p>
+      <div class="project-card">
+        <h2>tomoAO</h2>
+        <p>A Python package providing atmospheric tomography generic functions and tools for adaptive-optics systems.</p>
+        <code class="pip-snippet">pip install tomoAO</code>
+        <div class="project-links">
+          <a class="btn-secondary" href="https://github.com/SpaceODT/tomoAO" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn-secondary" href="https://pypi.org/project/tomoAO" target="_blank" rel="noopener">PyPI</a>
+        </div>
+      </div>
+
+      <div class="project-card" style="margin-top: 1.25rem;">
+        <h2>OOPAO</h2>
+        <p>Object-Oriented Python Adaptive Optics — a Python-based tool for end-to-end AO simulations, currently under active development. Space ODT is collaborating on its development.</p>
+        <div class="project-links">
+          <a class="btn-secondary" href="https://github.com/cheritier/OOPAO" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </div>
   </section>
